@@ -5,31 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
-    <title>Guess My Number!</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Gochi+Hand&display=swap" rel="stylesheet">
+
+    <title>Guess My Number Game for Kids</title>
   </head>
   <body>
-    <header>
-      <h1>Guess My Number!</h1>
-      <p class="between">(Between 1 and 20)</p>
-      <button class="btn again">Again!</button>
-      <div class="number">?</div>
-    </header>
-    <main>
-      <section class="left">
-        <input type="number" class="guess" />
-        <button class="btn check">Check!</button>
-      </section>
-      <section class="right">
-        <p class="message">Start guessing...</p>
-        <p class="label-score">💯 Score: <span class="score">20</span></p>
-        <p class="label-highscore">
-          🥇 Highscore: <span class="highscore">0</span>
-        </p>
-      </section>
-    </main>
+      <div class="p-6 flex">
+          <h1 class="w-2/3 mt-2 text-4xl text-right">Guess My Number Game </h1>
+          <button class="p-font m-auto bg-indigo-200 text-2xl p-4 rounded-lg btn again">Play Again!</button>
+          
+      </div>
+  <div class="flex flex-col md:flex-row justify-center items-center">
+ 
+    <div class="bg-gray-200 font-sans h-screen w-full flex flex-row justify-center items-center">
+    <div class="card w-80 mx-auto bg-white  shadow-xl hover:shadow">
+       <img class="w-32 mx-auto rounded-full -mt-20 border-8 border-white bg-white" src="images/answer-head.png" alt="">
+       <div class="text-center mt-2 text-2xl font-medium message">Can you guess the number I'm thinking of...</div>
+       
+       <div class="text-center font-normal text-5xl number">?</div>
+       
+       <hr class="mt-8">
+       <div class="flex p-4">
+         <div class="w-1/2 text-center font-bold highscore">
+           High Score:<span class="font-normal"> 0</span>
+         </div>
+         <div class="w-0 border border-gray-300">
+           
+         </div>
+         <div class="w-1/2 text-center font-bold">
+           Your Score:<span class="score font-normal"> 20</span>
+         </div>
+       </div>
+    </div>
+  </div>
+
+  <div class="bg-gray-200 font-sans h-screen w-full flex flex-row justify-center items-center">
+    <div class="card w-80 mx-auto bg-white  shadow-xl hover:shadow">
+       <img class="w-32 mx-auto rounded-full -mt-20 border-8 border-white bg-white" src="images/guessing-head.png" alt="">
+       <div class="text-center mt-2 text-2xl font-medium">Are you thinking of...</div>
+ <div class="w-4/5 m-auto">
+     <input type="number" placeholder="Enter Your Guess"
+       class="text-center text-lg px-4 py-2 ml-2 mt-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200 guess" />
+    </div>
+       <div class="text-center mt-2 font-light text-sm between ">Enter a number between 1 and 20</div>
+       
+       <div class="px-6 text-center mt-2 font-light text-sm">
+        
+       </div>
+       <hr class="mt-8">
+       <div class="flex p-4">
+         <div class="w-full text-center">
+            <button class="p-font m-auto bg-indigo-200 text-lg p-2 rounded-lg btn check">Check My Guess</button>
+         </div>
+         
+       </div>
+    </div>
+  </div>
+</div>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 
-    
   </body>
-</html>
+  </html>
