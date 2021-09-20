@@ -14,6 +14,7 @@
 //to get values from input fields use .value
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
+let highscore = 0;
 
 
 
@@ -40,6 +41,11 @@ let score = 20;
                 spread: 70,
                 origin: { y: 0.6 }
               });
+            
+              if(score > highscore) {
+                highscore = score;
+                document.querySelector('.highscore').textContent =  highscore;
+            }
     
     //when number is too high
     } else if (guess > secretNumber) {
