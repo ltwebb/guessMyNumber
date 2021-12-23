@@ -22,6 +22,9 @@ const displayScore = function (score) {
     document.querySelector('.score').textContent = score;
 }
 
+//const textAnimation = function (animate) {
+//    document.querySelector('.message').className = animate;
+//}
 
 //use .textContent to select the text from the element. some elements have lots of other info so if you are just changing the text, use .textcontent
 
@@ -73,10 +76,9 @@ document.querySelector('.check').addEventListener('click', function () {
 
     //play again reset page
     document.querySelector('.again').addEventListener('click', function () {
-        displayScore(20);
+       displayScore(20);
         secretNumber = Math.trunc(Math.random() * 20) + 1;
         displayMessage('Guess the number I\'\m thinking of...');
-        displayScore(score);
         document.querySelector('.number').textContent = '?';
         document.querySelector('.guess').value = '';
         displayTextColor('#000000');
