@@ -1,14 +1,15 @@
  /*title*/
  h1 {
-    font-family: 'Comfortaa', cursive;
-  }
+   font-family: 'Comfortaa', cursive;
+ }
 
-  p, .p-font {
-    font-family: 'Comfortaa', cursive;
-  }
+ p,
+ .p-font {
+   font-family: 'Comfortaa', cursive;
+ }
 
-  .animate {
-    animation-duration: 0.5s;
+ /* .animate {
+    animation-duration: 0.7s;
     animation-name: animate-pop;
     animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
   }
@@ -23,4 +24,4 @@
       opacity: 1;
       transform: scale(1, 1);
     }
-  }
+  } */

@@ -22,9 +22,6 @@ const displayScore = function (score) {
     document.querySelector('.score').textContent = score;
 }
 
-//const textAnimation = function (animate) {
-//    document.querySelector('.message').className = animate;
-//}
 
 //use .textContent to select the text from the element. some elements have lots of other info so if you are just changing the text, use .textcontent
 
@@ -58,12 +55,13 @@ document.querySelector('.check').addEventListener('click', function () {
         }
 
         //when number is wrong
-    } else if (guess !== secretNumber) {
+     } else if (guess !== secretNumber) {
         if (score > 1) {
             guess > secretNumber ? displayMessage('Too high! Try a smaller number.') : displayMessage('Too low! Try a bigger number.');
             score--;
             displayScore(score);
             displayTextColor('#990000');
+             
 
         } else {
             displayMessage('You lost the game, but you can try again!');
@@ -76,12 +74,13 @@ document.querySelector('.check').addEventListener('click', function () {
 
     //play again reset page
     document.querySelector('.again').addEventListener('click', function () {
-       displayScore(20);
-        secretNumber = Math.trunc(Math.random() * 20) + 1;
-        displayMessage('Guess the number I\'\m thinking of...');
+      score = 20; 
+      secretNumber = Math.trunc(Math.random() * 20) + 1;
+         displayMessage('Guess the number I\'\m thinking of...');
         document.querySelector('.number').textContent = '?';
         document.querySelector('.guess').value = '';
         displayTextColor('#000000');
         displayBackgroundColor('#ffffff');
+        displayScore(score);
     });
 });
